@@ -88,14 +88,14 @@
   <project name="platform/system/extras" path="system/extras"/>
   <project name="platform/system/media" path="system/media"/>
   <project name="platform/system/netd" path="system/netd"/>
-  <project name="platform/system/vold" path="system/vold" remote="caf" revision="refs/tags/M8960AAAAANLYA100715A"/>
+  <project name="platform/system/vold" path="system/vold"/>
   <project name="platform/hardware/qcom/media" path="hardware/qcom/media"/>
-  <project name="platform/hardware/qcom/gps" path="hardware/qcom/gps"/>
+  <project name="platform/hardware/qcom/gps" path="hardware/qcom/gps" remote="caf" revision="refs/tags/M8960AAAAANLYA100705"/>
   <project name="platform/hardware/msm7k" path="hardware/msm7k"/>
   <project name="platform/vendor/qcom-opensource/omx/mm-core" path="vendor/qcom/opensource/omx/mm-core"/>
   <project name="device/qcom/common" path="device/qcom/common"/>
 
-  <!-- Keon specific things -->
+  <!-- Peak specific things -->
   <project path="device/qcom/msm7627a" name="device_qcom_msm7627a" remote="gp-b2g" revision="master" />
   <project path="device/geeksphone/peak" name="device-gp-peak" remote="gp-b2g" revision="master" />
   <project path="kernel" name="gp-peak-kernel" remote="gp-b2g" revision="master" />
