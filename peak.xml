@@ -3,97 +3,104 @@
   <remote fetch="git://github.com/mozilla-b2g/" name="b2g"/>
   <remote fetch="git://github.com/gp-b2g/" name="gp-b2g"/>
   <remote fetch="http://git.mozilla.org/" name="mozillaorg"/>
-  <remote fetch="git://codeaurora.org/" name="caf"/>
+  <remote fetch="git://codeaurora.org/quic/la/" name="caf"/>
+  <remote fetch="git://github.com/CyanogenMod/" name="CM"/>
   <remote fetch="git://android.git.linaro.org/" name="linaro"/>
-  <remote name="QRD" fetch="git://codeaurora.org/quic/qrd-android" />
-  <default remote="QRD" revision="ics_master_qrd_101" sync-j="9"/>
+  <remote name="QRD" fetch="git://codeaurora.org/quic/qrd-android"/>
+  <remote name="apitrace" fetch="git://github.com/apitrace/"/>
+  <default remote="QRD" revision="ics_master_qrd_101" sync-j="4"/>
 
   <!-- Gonk specific things and forks -->
   <project name="platform_build" path="build" remote="gp-b2g" revision="master">
     <copyfile dest="Makefile" src="core/root.mk"/>
   </project>
-  <project name="fake-dalvik" path="dalvik" remote="b2g" revision="master"/>
-  <project name="releases/gaia.git" path="gaia" remote="mozillaorg" revision="v1-train" />
-  <project name="releases/gecko.git" path="gecko" remote="mozillaorg" revision="gecko-18" />
-  <project name="gonk-misc" path="gonk-misc" remote="b2g" revision="master"/>
-  <project name="rilproxy" path="rilproxy" remote="b2g" revision="master"/>
-  <project name="librecovery" path="librecovery" remote="b2g" revision="master"/>
-  <project name="moztt" path="external/moztt" remote="b2g" revision="master"/>
+  <project name="fake-dalvik" path="dalvik" remote="b2g" revision="v1.0.1"/>
+  <project name="gaia" path="gaia" remote="gp-b2g" revision="v1.0.1-hidpi-support-candidate"/>
+  <project name="releases/gecko.git" path="gecko" remote="mozillaorg" revision="08a0e76ee93117be39d56586a43c12aabc5960e9"/>
+  <project name="gonk-misc" path="gonk-misc" remote="b2g" revision="v1-train"/>
+  <project name="rilproxy" path="rilproxy" remote="b2g" revision="v1.0.1"/>
+  <project name="librecovery" path="librecovery" remote="b2g" revision="v1.0.1"/>
+  <project name="moztt" path="external/moztt" remote="b2g" revision="v1-train"/>
+  <project path="external/apitrace" name="apitrace" remote="apitrace" revision="master" />
 
   <!-- Stock Android things -->
-  <project name="platform/abi/cpp" path="abi/cpp" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/bionic" path="bionic" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/bootable/recovery" path="bootable/recovery" />
+  <project name="platform/abi/cpp" path="abi/cpp" remote="caf" revision="ics_strawberry"/>
+  <project name="android_bionic" path="bionic" remote="gp-b2g" revision="master"/>
+  <project name="platform/bootable/recovery" path="bootable/recovery"/>
   <project name="platform/development" path="development"/>
- <project name="device/common" path="device/common"/>
+  <project name="device/common" path="device/common"/>
   <project name="device/sample" path="device/sample"/>
-  <project name="platform/external/apache-http" path="external/apache-http" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
+  <project path="external/apriori" name="platform_external_apriori" remote="b2g" revision="v1.0.1"/>
+  <project name="platform/external/apache-http" path="external/apache-http" remote="caf" revision="ics_strawberry"/>
   <project name="platform/external/bluetooth/bluez" path="external/bluetooth/bluez"/>
-  <project name="platform/external/bluetooth/glib" path="external/bluetooth/glib" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
+  <project name="platform/external/bluetooth/glib" path="external/bluetooth/glib" remote="caf" revision="ics_strawberry"/>
   <project name="platform/external/bluetooth/hcidump" path="external/bluetooth/hcidump"/>
   <project name="platform/external/bsdiff" path="external/bsdiff" remote="caf" revision="refs/tags/AU_LINUX_ANDROID_JB_2.2.04.01.02.14.080"/>
-  <project name="platform/external/bzip2" path="external/bzip2" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
+  <project name="platform/external/bzip2" path="external/bzip2" remote="caf" revision="ics_strawberry"/>
   <project name="platform/external/dbus" path="external/dbus"/>
-  <project name="platform/external/dhcpcd" path="external/dhcpcd"/>
+  <project name="platform/external/dhcpcd" path="external/dhcpcd" remote="caf" revision="ics_strawberry"/>
   <project name="platform/external/dnsmasq" path="external/dnsmasq" remote="caf" revision="refs/tags/AU_LINUX_ANDROID_JB_2.2.04.01.02.14.080"/>
-  <project name="platform/external/e2fsprogs" path="external/e2fsprogs" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/external/expat" path="external/expat" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/external/fdlibm" path="external/fdlibm" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/external/flac" path="external/flac" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/external/freetype" path="external/freetype" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
+  <project path="external/elfcopy" name="platform_external_elfcopy" remote="b2g" revision="v1.0.1"/>
+  <project path="external/elfutils" name="platform_external_elfutils" remote="b2g" revision="v1.0.1"/>
+  <project name="platform/external/e2fsprogs" path="external/e2fsprogs" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/expat" path="external/expat" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/fdlibm" path="external/fdlibm" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/flac" path="external/flac" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/freetype" path="external/freetype" remote="caf" revision="ics_strawberry"/>
   <project name="platform/external/giflib" path="external/giflib" remote="caf" revision="refs/tags/AU_LINUX_ANDROID_JB_2.2.04.01.02.14.080"/>
   <project name="platform/external/gtest" path="external/gtest" remote="linaro" revision="refs/tags/android-4.2_r1"/>
-  <project name="platform/external/harfbuzz" path="external/harfbuzz" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/external/icu4c" path="external/icu4c" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/external/iptables" path="external/iptables" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/external/jhead" path="external/jhead" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/external/jpeg" path="external/jpeg" remote="caf" revision="refs/tags/M8960AAAAANLYA1005304"/>
+  <project name="platform/external/harfbuzz" path="external/harfbuzz" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/icu4c" path="external/icu4c" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/iptables" path="external/iptables" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/jhead" path="external/jhead" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/jpeg" path="external/jpeg" remote="caf" revision="ics_strawberry"/>
   <project name="platform/external/libgsm" path="external/libgsm" remote="caf" revision="refs/tags/AU_LINUX_ANDROID_JB_2.2.04.01.02.14.080"/>
   <project name="platform/external/liblzf" path="external/liblzf" remote="caf" revision="refs/tags/AU_LINUX_ANDROID_JB_2.2.04.01.02.14.080"/>
-  <project name="platform/external/libnfc-nxp" path="external/libnfc-nxp" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
+  <project name="platform/external/libnfc-nxp" path="external/libnfc-nxp" remote="caf" revision="ics_strawberry"/>
   <project name="platform/external/libnl-headers" path="external/libnl-headers" remote="caf" revision="refs/tags/AU_LINUX_ANDROID_JB_2.2.04.01.02.14.080"/>
-  <project name="platform/external/libphonenumber" path="external/libphonenumber" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/external/libpng" path="external/libpng" remote="caf" revision="refs/tags/M8960AAAAANLYA100715A"/>
-  <project name="platform/external/libvpx" path="external/libvpx" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/external/llvm" path="external/llvm" remote="caf" revision="refs/tags/M8960AAAAANLYA1005304"/>
-  <project name="platform/external/mksh" path="external/mksh" remote="caf" revision="refs/tags/M8960AAAAANLYA1005304"/>
-  <project name="platform_external_opensans" path="external/opensans" remote="b2g" revision="master"/>
-  <project name="platform/external/openssl" path="external/openssl" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
+  <project name="platform/external/libphonenumber" path="external/libphonenumber" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/libpng" path="external/libpng" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/libvpx" path="external/libvpx" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/llvm" path="external/llvm"/>
+  <project name="platform/external/mksh" path="external/mksh"/>
+  <project name="platform_external_opensans" path="external/opensans" remote="b2g" revision="v1.0.1"/>
+  <project name="platform/external/openssl" path="external/openssl" remote="caf" revision="ics_strawberry"/>
   <project name="platform/external/protobuf" path="external/protobuf" remote="caf" revision="refs/tags/AU_LINUX_ANDROID_JB_2.2.04.01.02.14.080"/>
   <project name="platform/external/safe-iop" path="external/safe-iop" remote="caf" revision="refs/tags/AU_LINUX_ANDROID_JB_2.2.04.01.02.14.080"/>
-  <project name="screencap-gonk" path="external/screencap-gonk" remote="b2g" revision="master"/>
-  <project name="platform/external/skia" path="external/skia" remote="caf" revision="refs/tags/M8960AAAAANLYA100715A"/>
-  <project name="platform/external/sonivox" path="external/sonivox" remote="caf" revision="refs/tags/M8960AAAAANLYA1005304"/>
+  <project name="screencap-gonk" path="external/screencap-gonk" remote="b2g" revision="v1.0.1"/>
+  <project name="platform/external/skia" path="external/skia" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/sonivox" path="external/sonivox"/>
   <project name="platform/external/speex" path="external/speex" remote="caf" revision="refs/tags/AU_LINUX_ANDROID_JB_2.2.04.01.02.14.080"/>
-  <project name="platform/external/sqlite" path="external/sqlite" remote="caf" revision="fb30e613139b8836fdc8e81e166cf3a76e5fa17f"/>
-  <project name="platform/external/stlport" path="external/stlport" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/external/strace" path="external/strace" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
+  <project name="platform/external/sqlite" path="external/sqlite" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/stlport" path="external/stlport" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/strace" path="external/strace" remote="caf" revision="ics_strawberry"/>
   <project name="platform/external/tagsoup" path="external/tagsoup" remote="caf" revision="refs/tags/AU_LINUX_ANDROID_JB_2.2.04.01.02.14.080"/>
-  <project name="platform/external/tinyalsa" path="external/tinyalsa" remote="caf" revision="refs/tags/M8960AAAAANLYA1005304"/>
+  <project name="platform/external/tinyalsa" path="external/tinyalsa"/>
   <project name="platform/external/tremolo" path="external/tremolo" remote="caf" revision="refs/tags/AU_LINUX_ANDROID_JB_2.2.04.01.02.14.080"/>
-  <project name="unbootimg" path="external/unbootimg" remote="b2g" revision="master"/>
+  <project name="unbootimg" path="external/unbootimg" remote="b2g" revision="v1.0.1"/>
   <project name="platform/external/webp" path="external/webp" remote="caf" revision="refs/tags/AU_LINUX_ANDROID_JB_2.2.04.01.02.14.080"/>
-  <project name="platform/external/webrtc" path="external/webrtc" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/external/wpa_supplicant" path="external/wpa_supplicant" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/external/hostap" path="external/hostap" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/external/zlib" path="external/zlib" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/external/yaffs2" path="external/yaffs2" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
-  <project name="platform/frameworks/opt/emoji" path="frameworks/opt/emoji" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
+  <project name="platform/external/webrtc" path="external/webrtc" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/wpa_supplicant" path="external/wpa_supplicant" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/hostap" path="external/hostap" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/zlib" path="external/zlib" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/external/yaffs2" path="external/yaffs2" remote="caf" revision="ics_strawberry"/>
+  <project name="platform/frameworks/opt/emoji" path="frameworks/opt/emoji" remote="caf" revision="ics_strawberry"/>
   <project name="platform/frameworks/support" path="frameworks/support"/>
   <project name="platform/libcore" path="libcore"/>
-  <project name="platform/ndk" path="ndk" remote="caf" revision="refs/tags/AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.00.19.161"/>
+  <project name="platform/ndk" path="ndk" remote="caf" revision="ics_strawberry"/>
   <project name="platform/prebuilt" path="prebuilt"/>
   <project name="platform/system/bluetooth" path="system/bluetooth"/>
   <project name="platform/system/core" path="system/core"/>
   <project name="platform/system/extras" path="system/extras"/>
   <project name="platform/system/media" path="system/media"/>
-  <project name="platform/system/netd" path="system/netd"/>
+  <project name="platform/system/netd" path="system/netd" remote="caf" revision="ics_strawberry"/>
   <project name="platform/system/vold" path="system/vold"/>
   <project name="platform/hardware/qcom/media" path="hardware/qcom/media"/>
-  <project name="platform/hardware/qcom/gps" path="hardware/qcom/gps" remote="caf" revision="refs/tags/M8960AAAAANLYA100705"/>
+  <project name="platform/hardware/qcom/gps" path="hardware/qcom/gps" remote="caf" revision="ics_strawberry"/>
   <project name="platform/hardware/msm7k" path="hardware/msm7k"/>
   <project name="platform/vendor/qcom-opensource/omx/mm-core" path="vendor/qcom/opensource/omx/mm-core"/>
   <project name="device/qcom/common" path="device/qcom/common"/>
+  <project name="android_external_busybox" path="external/busybox" remote="CM" revision="cm-10.1"/>
 
   <!-- Peak specific things -->
   <project path="device/qcom/msm7627a" name="device_qcom_msm7627a" remote="gp-b2g" revision="master" />
