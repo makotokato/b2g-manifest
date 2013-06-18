@@ -4,9 +4,9 @@
   <remote fetch="git://github.com/mozilla-b2g/" name="b2g"/>
   <remote fetch="git://github.com/mozilla/" name="mozilla"/>
   <remote fetch="git://github.com/apitrace/" name="apitrace"/>
-  <remote  alias="insignal" name="samsung_exynos_android" fetch="." />
-  <remote  alias="insignal" name="insignal_non_android" fetch="../../../insignal" />
-  <remote  alias="insignal" name="insignal_android" fetch="../../../insignal/android" />
+  <remote name="samsung_exynos_android" fetch="git://git.insignal.co.kr/samsung/exynos/android/" />
+  <remote name="insignal_non_android" fetch="git://git.insignal.co.kr/insignal/" />
+  <remote name="insignal_android" fetch="git://git.insignal/co.kr/insignal/android/" />
 
   <default remote="aosp" revision="refs/tags/android-4.2.2_r1" sync-j="4"/>
 
