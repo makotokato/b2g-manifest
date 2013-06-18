@@ -6,7 +6,7 @@
   <remote fetch="git://github.com/apitrace/" name="apitrace"/>
   <remote name="samsung_exynos_android" fetch="git://git.insignal.co.kr/samsung/exynos/android/" />
   <remote name="insignal_non_android" fetch="git://git.insignal.co.kr/insignal/" />
-  <remote name="insignal_android" fetch="git://git.insignal/co.kr/insignal/android/" />
+  <remote name="insignal_android" fetch="git://git.insignal.co.kr/insignal/android/" />
 
   <default remote="aosp" revision="refs/tags/android-4.2.2_r1" sync-j="4"/>
 
