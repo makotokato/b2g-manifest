@@ -20,7 +20,6 @@
   <project name="gaia" path="gaia" remote="b2g" revision="master"/>
   <project name="gonk-misc" path="gonk-misc" remote="b2g" revision="master"/>
   <project name="moztt" path="external/moztt" remote="b2g" revision="master"/>
-  <project name="apitrace" path="external/apitrace" remote="apitrace" revision="master" />
 
   <!-- Stock Android things -->
   <project groups="darwin" name="platform/prebuilts/clang/darwin-x86/3.1" path="prebuilts/clang/darwin-x86/3.1"/>
@@ -126,7 +125,7 @@
   <project path="device/samsung_slsi/arndale" name="device/samsung_slsi/arndale" remote="insignal_android" revision="exynos-jb_mr1" />
   <project name="device/generic/armv7-a" path="device/generic/armv7-a"/>
   <project name="device/generic/armv7-a-neon" path="device/generic/armv7-a-neon"/>
-  <project path="device/samsung_slsi/arndale-kernel" name="linux" remote="insignal_non_android" revision="exynos-jb_mr1" />
+  <project path="kernel" name="linux" remote="insignal_non_android" revision="exynos-jb_mr1" />
   <project path="hardware/samsung_slsi/exynos" name="platform/hardware/samsung_slsi/exynos" remote="samsung_exynos_android" revision="exynos-jb_mr1" />
   <project path="hardware/samsung_slsi/exynos5" name="platform/hardware/samsung_slsi/exynos5" remote="samsung_exynos_android" revision="exynos-jb_mr1" />
   <project path="hardware/samsung_slsi/openmax" name="platform/hardware/samsung_slsi/openmax" remote="samsung_exynos_android" revision="exynos-jb_mr1" />
