@@ -3,18 +3,21 @@
 
   <include name="base-jb.xml"/>
 
+  <remote name="galaxy-nexus-b2g-jb" fetch="git://github.com/makotokato/" />
   <default remote="caf" revision="refs/tags/android-4.3_r2.1" sync-j="4"/>
 
   <!-- Galaxy Nexus specific things -->
   <project name="device/generic/armv7-a-neon" path="device/generic/armv7-a-neon"/>
-  <project path="device/samsung/maguro" name="device/samsung/maguro"/>
-  <project path="device/samsung/tuna" name="device/samsung/tuna"/>
+  <project name="android-device-maguro" path="device/samsung/maguro" remote="galaxy-nexus-b2g-jb" revision="b2g-4.3_r2.1" />
+  <project name="android-device-tuna" path="device/samsung/tuna" remote="galaxy-nexus-b2g-jb" revision="b2g-4.3_r2.1" />
   <project path="device/ti/panda" name="device/ti/panda"/>
-  <project path="hardware/invensense" name="platform/hardware/invensense"/>
-  <project path="hardware/ti/omap4xxx" name="platform/hardware/ti/omap4xxx"/>
+  <project name="platform_system_nfcd" path="system/nfcd" remote="b2g" revision="master"/>
+  <project name="platform/external/libnfc-nci" path="external/libnfc-nci"/>
   <project name="platform/external/wpa_supplicant_8" path="external/wpa_supplicant_8"/>
   <project name="platform/hardware/broadcom/libbt" path="hardware/broadcom/libbt"/>
   <project name="platform/hardware/broadcom/wlan" path="hardware/broadcom/wlan"/>
+  <project name="platform/hardware/invensense" path="hardware/invensense"/>
+  <project name="platform/hardware/ti/omap4xxx" path="hardware/ti/omap4xxx"/>
   <project name="platform/hardware/ril" path="hardware/ril"/>
 
 </manifest>
